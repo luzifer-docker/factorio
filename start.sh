@@ -32,6 +32,7 @@ case ${ACTION} in
     echo "Usage: docker run quay.io/luzifer/factorio [init | create | start]"
     echo
     echo "Alternative: docker run quay.io/luzifer/factorio <factorio server options>"
+    ;;
   *)
     exec ${BINARY} "$@"
     ;;
