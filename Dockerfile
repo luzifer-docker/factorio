@@ -14,8 +14,7 @@ RUN set -ex \
  && useradd -d /opt/factorio -M -u 10000 factorio \
  && tar -C /opt -x -z -f /tmp/factorio.tgz \
  && chown -R factorio:factorio /opt/factorio \
- && rm /tmp/factorio.tgz \
- && sed -i "s;^write-data=.*$;write-data=/data;" /opt/factorio/config/config.ini
+ && rm /tmp/factorio.tgz
 
 USER factorio
 

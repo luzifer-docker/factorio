@@ -6,6 +6,11 @@ ACTION=$1
 BINARY="/opt/factorio/bin/x64/factorio"
 MAP_FILE="mapfile.zip"
 
+if ! [ -e /opt/factorio/config/config.ini ]; then
+  mkdir -p /opt/factorio/config
+  cp /opt/defaults/config.ini /opt/factorio/config/config.ini
+fi
+
 case ${ACTION} in
   "init")
     echo "Initializing files in case they do not exist: map-gen-settings.json / server-settings.json"
