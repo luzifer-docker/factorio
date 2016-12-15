@@ -26,7 +26,7 @@ case ${ACTION} in
     fi
 
     [ -e server-settings.json ] || cp /opt/defaults/server-settings.json server-settings.json
-    exec ${BINARY} --server-settings server-settings.json --start-server ${MAP_FILE}
+    exec ${BINARY} --server-settings server-settings.json --start-server-load-latest --start-server ${MAP_FILE}
     ;;
   "help")
     echo "Usage: docker run quay.io/luzifer/factorio [init | create | start]"
