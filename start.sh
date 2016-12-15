@@ -28,6 +28,10 @@ case ${ACTION} in
     [ -e server-settings.json ] || cp /opt/defaults/server-settings.json server-settings.json
     exec ${BINARY} --server-settings server-settings.json --start-server ${MAP_FILE}
     ;;
+  "help")
+    echo "Usage: docker run quay.io/luzifer/factorio [init | create | start]"
+    echo
+    echo "Alternative: docker run quay.io/luzifer/factorio <factorio server options>"
   *)
     exec ${BINARY} "$@"
     ;;

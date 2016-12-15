@@ -4,7 +4,7 @@ ENV FACTORIO_SERVER_VERSION 0.14.21
 
 ENTRYPOINT ["/opt/defaults/start.sh"]
 EXPOSE 34197/udp
-CMD ["--help"]
+CMD ["help"]
 
 ADD https://www.factorio.com/get-download/${FACTORIO_SERVER_VERSION}/headless/linux64 /tmp/factorio.tgz
 ADD . /opt/defaults
