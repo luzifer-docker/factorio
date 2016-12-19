@@ -1,0 +1,11 @@
+---
+
+image: "quay.io/luzifer/repo-runner-image"
+checkout_dir: /src/factorio
+
+commands:
+  - make ci
+
+environment:
+  GHUSER: luzifer-docker
+
